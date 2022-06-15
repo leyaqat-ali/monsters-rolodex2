@@ -35,7 +35,7 @@ class App extends Component {
       <div className="App">
         <h1>{this.state.heading}</h1>
         <SearchBox placeholder='Search Monster' handleChange={this.handleChange} />
-        <CardList monsters={filteredMonsters} />
+        {filteredMonsters !=0 ? <CardList monsters={filteredMonsters} /> : <h2>Monster not found with this keyword</h2>}        
       </div>
     )
   }
